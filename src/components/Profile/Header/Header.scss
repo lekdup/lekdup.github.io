@@ -7,16 +7,11 @@
     }
     &-social-media {
         display: flex;
-        gap: 1rem;
-        font-size: 1.6rem;
-        &:hover {
-            transform: scale(.5);
-        }
-        &-linkedin:hover {
-            color: #0077B5;
-        }
-        &-twitter:hover {
-            color: #00ACEE;
+        gap: 1.5rem;
+        font-size: 2rem;
+        & li:hover {
+            color: #5D737E;
+            transform: scale(.9);
         }
     }
 }

@@ -77,6 +77,13 @@ module.exports = {
           filename: 'fonts/[hash][ext][query]'
         }
       },
+      {
+        test: /\.mp4$/,
+        loader: 'file-loader',
+        generator: {
+          filename: 'videos/[hash].[ext]',
+        },
+      },
     ],
   },
 };
