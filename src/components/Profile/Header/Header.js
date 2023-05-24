@@ -15,7 +15,7 @@ function Header() {
                 <li><a href='https://www.linkedin.com/in/lekdup/' target='blank' title='LinkedIn' className='Header-social-media-linkedin'><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 <li><a href='https://github.com/lekdup' target='blank' title='GitHub' className='Header-social-media-github'><FontAwesomeIcon icon={faGithub} /></a></li>
                 <li><a href='https://twitter.com/BaguetteBride' target='blank' title='Twitter' className='Header-social-media-twitter'><FontAwesomeIcon icon={faTwitter} /></a></li>
-                <li><button onClick={() =>{
+                <li><button className="Header-btn" onClick={() =>{
                     
                 }}>Resume <FontAwesomeIcon icon={faDownload} /></button></li>
             </ul>

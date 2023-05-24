@@ -9,9 +9,22 @@
         display: flex;
         gap: 1.5rem;
         font-size: 2rem;
+        transition: all 1s ease-in;
         & li:hover {
             color: #5D737E;
-            transform: scale(.9);
+            transform: scale(.95);
+        }
+    }
+
+    &-btn {
+        border: none;
+        background-color: #30292F;
+        font-size: 1.2rem;
+        border-radius: 100vmax;
+        padding: .4rem 1.4rem;
+        color: #FCFCFC;
+        &:hover {
+            background-color: #5D737E;
         }
     }
 }

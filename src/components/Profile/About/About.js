@@ -32,7 +32,7 @@ function About() {
                 </div>
             </div>
             <div className="skills">
-                <p>Tech Stack </p>
+                <p>Tech Stack |</p>
                 <ul>
                     <li>
                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="html5">
