@@ -9,12 +9,13 @@
     margin: 0 auto;
     vertical-align: middle;
     &-me {
+      flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         max-width: 40rem;
         &-title {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 2rem;
         }
@@ -46,30 +47,77 @@
     margin-top: 8rem;
     display: flex;
     align-items: center;
-    & ul {
+    &-list {
         display: flex;
-        gap: 2rem;
+        // gap: 2rem;
         margin-left: 4rem;
         padding-left: 4rem;
-        & li {
+        &-name {
+          // overflow: hidden;
+          position: relative;
+          padding-inline: 1.3rem;
+          & svg {
             width: 4rem;
             height: 4rem;
             border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
             border: 2px solid #3F4045;
             animation: morph 4s ease-in-out infinite;
             background-color: #5D737E;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &:hover{
-                background-color: #FCFCFC;
+            &:hover,
+            &:focus-visible {
+                background-color: lighten(#5D737E, 40);
             }
-            & svg {
-                width: 3rem;
-            }
+          }
+          &::after {
+            content: attr(data-name);
+            position: absolute;
+            width: 100%;
+            padding: .4rem 0;
+            left: 0;
+            top: -70%;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            background-color: lighten(#5D737E, 40);
+
+            translate: 0;
+            scale: 0 1;
+            transition: 
+              scale 350ms var(--_scale-delay, 0ms),
+              translate 650ms var(--_translate-delay, 0ms)
+            ;
+          }
+          &:hover::after {
+            scale: 1 1;
+            z-index: 9;
+          }
+
+          &:hover + li::after {
+            translate: -100%;
+            --_scale-delay: 500ms;
+            --_translate-delay: 300ms;
+          }
+
+          &:has(+ :hover)::after {
+            translate: 100%;
+            --_scale-delay: 500ms;
+            --_translate-delay: 300ms;
+          }
         }
     }
 }
+// .language-name {
+//   position: absolute;
+//   top: -80%;
+//   color: #000;
+//   background-color: #FCFCFC;
+//   padding: .2rem 1rem;
+//   border-radius: 1rem;
+//   font-size: 1.2rem;
+//   font-weight: bold;
+// }
 
 @keyframes morph {
     0% {

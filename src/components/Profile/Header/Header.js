@@ -10,7 +10,7 @@ function Header() {
     }
     return (
         <div className="Header">
-            <h1 className="Header-name">Tenzin.dev</h1>
+            <h2 className="Header-name"><a href='mailto:lekdup.dev@gmail.com'>Tenzin.dev</a></h2>
             <ul className="Header-social-media">
                 <li><a href='https://www.linkedin.com/in/lekdup/' target='blank' title='LinkedIn' className='Header-social-media-linkedin'><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 <li><a href='https://github.com/lekdup' target='blank' title='GitHub' className='Header-social-media-github'><FontAwesomeIcon icon={faGithub} /></a></li>
