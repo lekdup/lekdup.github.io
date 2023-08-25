@@ -49,6 +49,7 @@
     align-items: center;
     &-list {
         display: flex;
+        flex-wrap: wrap;
         // gap: 2rem;
         margin-left: 4rem;
         padding-left: 4rem;
@@ -85,7 +86,7 @@
             translate: 0;
             scale: 0 1;
             transition: 
-              scale 350ms var(--_scale-delay, 0ms),
+              scale 600ms var(--_scale-delay, 0ms),
               translate 650ms var(--_translate-delay, 0ms)
             ;
           }
@@ -96,13 +97,13 @@
 
           &:hover + li::after {
             translate: -100%;
-            --_scale-delay: 500ms;
+            --_scale-delay: 400ms;
             --_translate-delay: 300ms;
           }
 
           &:has(+ :hover)::after {
             translate: 100%;
-            --_scale-delay: 500ms;
+            --_scale-delay: 400ms;
             --_translate-delay: 300ms;
           }
         }

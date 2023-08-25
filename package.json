@@ -1,5 +1,6 @@
 {
-  "name": "react-modele",
+  "name": "lekdup.github.io",
+  "homepage": "https://lekdup.github.io/lekdup.github.io",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
@@ -7,8 +8,11 @@
     "lint:fix": "eslint --fix ./src/** --no-error-on-unmatched-pattern",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json",
-    "save-deps": "node updateDeps.js"
+    "save-deps": "node updateDeps.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/eslint-parser": "^7.21.3",
@@ -33,6 +37,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.23",

@@ -17,7 +17,7 @@ function Header() {
                 <li><a href='https://twitter.com/BaguetteBride' target='blank' title='Twitter' className='Header-social-media-twitter'><FontAwesomeIcon icon={faTwitter} /></a></li>
                 <li><button className="Header-btn" onClick={() =>{
                     
-                }}>Resume <FontAwesomeIcon icon={faDownload} /></button></li>
+                }}><a href="https://drive.google.com/file/d/1GZap1Ty7l6peQe_luh8qCJDTkCXqHzY0/view?usp=sharing" target='blank'>Resume <FontAwesomeIcon icon={faDownload} /></a></button></li>
             </ul>
         </div>
     );
