@@ -1,0 +1,72 @@
+.App {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100dvh;
+  margin: auto;
+  // display: grid;
+}
+
+.Header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #5D737E;
+  &-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5D737E;
+    &:hover {
+      color: #FCFCFC;
+    }
+  }
+  &-social {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      & a {
+        font-size: 1.8rem;
+        color: #5D737E;
+      }
+      & li {
+        transition: all .3s ease-in-out;
+        &:hover,
+        &:focus {
+          & a {
+            color: #FCFCFC;
+          }
+          scale: 1.1;
+        }
+      }
+  }
+}
+
+#cv {
+border: none;
+font-size: 1rem;
+font-weight: 700;
+border-radius: 100vmax;
+padding: .3rem 1rem;
+background-color: #5D737E;
+color: #30292F;
+&:hover {
+  background-color: #30292F;
+  color: #FCFCFC;
+}
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #5D737E;
+  // margin: 0 auto;
+  & a {
+    color: #5D737E;
+    text-decoration: underline;
+  }
+}
+#heart {
+  color: red;
+}

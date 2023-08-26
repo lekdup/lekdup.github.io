@@ -1,5 +1,5 @@
 import './About.scss';
-import myVideo from '../../../assets/Profile_video.mp4';
+import myVideo from '../../assets/Profile_video.mp4';
 import { useRef } from 'react';
 
 function About() {
@@ -13,11 +13,16 @@ function About() {
     }
 
     return (
-        <section className="container">
+        <section className='container-About'>
             <div className="About">
                 <article className="About-me">
                     <h1 className="About-me-title">Web Developer.</h1>
-                    <p className="About-me-text">Hello world !<br/> I'm Tenzin. A passionate Front-end React Developer from Paris, France !</p>
+                    <p className="About-me-text"><span>Bonjour !</span><br/> 
+                    I'm Tenzin, a passionate web developer based in the enchanting city of Paris, France. 
+                    With a recent graduation from an intensive web development course that earned me a Bac +2 degree, I've laid a solid foundation for my journey into the digital realm. 
+                    Eager to delve even deeper, I'm currently pursuing a bachelor's degree in a 'Project Web and Mobile' program at Bac +3 level. 
+                    This academic pusuit goes hand in hand with real-world exposure through an internship contract, allowing me to seamlessly bridge theory and practice. 
+                    Join me as I weave code into captivating web and mobile experiences, drawing inspiration from the vibrant culture and innovation that Paris ignites within me.</p>
                 </article>
                 <div className="About-profile-video">
                     <video
