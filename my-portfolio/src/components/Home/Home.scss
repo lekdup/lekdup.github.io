@@ -1,0 +1,178 @@
+.container-Home {
+  margin: 0 auto;
+  min-height: calc(100dvh - 4.5rem);
+  display: flex;
+  gap: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Home {
+    display: flex;
+    gap: 4rem;
+    &-me {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 500px;
+      &-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #F8FAFC;
+      }
+      &-text {
+        line-height: 1.8rem;
+        text-align: justify;
+        color: #94A2B8;
+        & span {
+          display: inline-block;
+          padding-bottom: 1rem;
+        }
+      }
+      &-social {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        & a {
+          font-size: 1.8rem;
+          color: #94A2B8;
+        }
+        & li {
+          transition: all .3s ease-in-out;
+          &:hover,
+          &:focus {
+            & a {
+              color: #F8FAFC;
+            }
+            scale: 1.1;
+          }
+        }
+      }
+    }
+    &-profile-video {
+      position: relative;
+      width: 18rem;
+      height: 18rem;
+      filter: grayscale(1);
+      border: 4px solid #5D737E;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: auto;
+      &:hover {
+        filter: grayscale(0);
+      }
+      & video {
+        position: absolute;
+        bottom: -28%;
+        left: -7%;
+        width: 110%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+}
+
+#cv {
+  border: 1px solid rgba(97, 141, 234, .1);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 100vmax;
+  padding: .3rem 1rem;
+  background: radial-gradient(46.800000000000004% 50% at 50% 100%,#0442c8 0%,rgba(5,41,118,.7) 100%);
+  color: #F8FAFC;
+    &:hover {
+      color: #E2E8F0;
+    }
+  }
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+      color: #E2E8F0;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 4rem;
+        &-name {
+          position: relative;
+          padding: 1.3rem;
+          & svg {
+            color: #94A2B8;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: 1px solid rgba(148, 177, 240, .07);
+            background: radial-gradient(38.5% 50% at 50% 100%,rgba(9,87,165,.5) 0%,rgba(182,209,237,.05) 100%);
+          }
+          &:hover svg {
+            // border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            background: radial-gradient(46.800000000000004% 50% at 50% 100%,#0442c8 0%,rgba(5,41,118,.7) 100%);
+            animation: morph 4s ease-in-out infinite;
+            border: 1px solid rgba(97, 141, 234, .1);
+
+          }
+          &::after {
+            content: attr(data-name);
+            position: absolute;
+            width: 100%;
+            padding: .2rem 0;
+            left: 0;
+            top: -30%;
+            color: #94A2B8;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #181B20;
+
+            translate: 0;
+            scale: 0 1;
+            transition: 
+              scale 600ms var(--_scale-delay, 0ms),
+              translate 650ms var(--_translate-delay, 0ms)
+            ;
+          }
+          &:hover::after {
+            scale: 1 1;
+            z-index: 9;
+          }
+
+          &:hover + li::after {
+            translate: -100%;
+            --_scale-delay: 400ms;
+            --_translate-delay: 300ms;
+          }
+
+          &:has(+ :hover)::after {
+            translate: 100%;
+            --_scale-delay: 400ms;
+            --_translate-delay: 300ms;
+          }
+        }
+    }
+}
+// .language-name {
+//   position: absolute;
+//   top: -80%;
+//   color: #000;
+//   background-color: #FCFCFC;
+//   padding: .2rem 1rem;
+//   border-radius: 1rem;
+//   font-size: 1.2rem;
+//   font-weight: bold;
+// }
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
