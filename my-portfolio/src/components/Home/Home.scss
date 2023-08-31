@@ -36,14 +36,14 @@
         gap: .6rem;
         & a {
           font-size: 1.8rem;
-          color: #94A2B8;
+          color: #E2E8F0;
         }
         & li {
           transition: all .3s ease-in-out;
           &:hover,
           &:focus {
             & a {
-              color: #F8FAFC;
+              color: #FFF;
             }
             scale: 1.1;
           }
@@ -54,13 +54,17 @@
       position: relative;
       width: 18rem;
       height: 18rem;
-      filter: grayscale(1);
-      border: 4px solid #5D737E;
+      // filter: grayscale(1);
+      border: 4px solid rgba(97, 141, 234, .2);
       border-radius: 50%;
       overflow: hidden;
       margin-top: auto;
-      &:hover {
-        filter: grayscale(0);
+      & video {
+        opacity: .6;
+        transition: opacity 200ms ease-in-out;
+        &:hover{
+          opacity: .8;
+        }
       }
       & video {
         position: absolute;
@@ -79,10 +83,11 @@
   font-weight: 700;
   border-radius: 100vmax;
   padding: .3rem 1rem;
-  background: radial-gradient(46.800000000000004% 50% at 50% 100%,#0442c8 0%,rgba(5,41,118,.7) 100%);
-  color: #F8FAFC;
-    &:hover {
-      color: #E2E8F0;
+  border: 1px solid rgba(148, 177, 240, .2);
+  background: radial-gradient(38.5% 50% at 50% 100%,rgba(9,87,165,.5) 0%,rgba(182,209,237,.05) 100%);
+  color: #E2E8F0;
+  &:hover {
+      background: radial-gradient(46.800000000000004% 50% at 50% 100%,#0442c8 0%,rgba(5,41,118,.7) 100%);
     }
   }
 
@@ -104,16 +109,14 @@
             color: #94A2B8;
             width: 4rem;
             height: 4rem;
-            border-radius: 50%;
-            border: 1px solid rgba(148, 177, 240, .07);
+            border: 1px solid rgba(148, 177, 240, .2);
             background: radial-gradient(38.5% 50% at 50% 100%,rgba(9,87,165,.5) 0%,rgba(182,209,237,.05) 100%);
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
           }
           &:hover svg {
-            // border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
             background: radial-gradient(46.800000000000004% 50% at 50% 100%,#0442c8 0%,rgba(5,41,118,.7) 100%);
-            animation: morph 4s ease-in-out infinite;
+            animation: morph 3s ease-out infinite;
             border: 1px solid rgba(97, 141, 234, .1);
-
           }
           &::after {
             content: attr(data-name);
