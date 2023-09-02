@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faEnvelope, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Home from './Home/Home';
-import NavBar from './NavBar/NavBar';
 import Projects from './Projects/Projects';
 import About from './About/About';
 
@@ -21,7 +20,14 @@ function App() {
         ) : (
           <FontAwesomeIcon icon={ faEnvelope } />
         )}</a></h2>
-        <NavBar />
+        <nav>
+          <ul className='NavBar'>
+            <li><a href='#Home'>Home</a></li>
+            <li><a href='#About'>About</a></li>
+            <li><a href='#Projects'>Projects</a></li>
+            <li><a href='#Contact'>Contact</a></li>
+          </ul>
+        </nav>
       </header>
       <main className="container">
         <Home />

@@ -16,7 +16,7 @@ function Home() {
     }
 
     return (
-        <section className='container-Home'>
+        <section className='container-Home' id='Home'>
             <div className="Home">
                 <article className="Home-me">
                     <h1 className="Home-me-title">Web Developer.</h1>

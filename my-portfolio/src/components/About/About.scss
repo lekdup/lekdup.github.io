@@ -1,23 +1,31 @@
 .About {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  &-title {
-    background: radial-gradient(38.5% 50% at 50% 100%,rgba(9,87,165,.5) 0%,rgba(182,209,237,.1) 100%);;
-    border: 1px solid rgba(148, 177, 240, .07);
-    border-radius: 100vmax;
-    text-align: center;
-    width: 8rem;
-    color: #64738B;
-    font-size: 1rem;
-    font-weight: normal;
-  }
+  padding: 3rem 0;
   &-detail {
     background: radial-gradient(50% 50% at 49.7% 100%,#02173b 0%,hsl(218,32%,8%) 100%);
     border: 1px solid #21252c;
     color: #94A2B8;
     border-radius: 2.5rem;
-    padding: 1rem;
+    padding: 4rem;
+    text-align: center;
+    &-title {
+      background: radial-gradient(38.5% 50% at 50% 100%,rgba(9,87,165,.5) 0%,rgba(182,209,237,.1) 100%);;
+      border: 1px solid rgba(148, 177, 240, .07);
+      border-radius: 100vmax;
+      color: #64738B;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding: .3rem;
+      width: 120px;
+      margin: 0 auto 1.5rem;
+    }
+    &-header {
+      color: #F8FAFC;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    &-text {
+      line-height: 1.6rem;
+    }
   }
 }

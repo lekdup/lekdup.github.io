@@ -2,7 +2,7 @@ import './Projects.scss';
 
 function Projects() {
   return (
-    <section className='Projects'>
+    <section className='Projects' id='Projects'>
       <h2 className="Projects-title">
         Projects:
       </h2>

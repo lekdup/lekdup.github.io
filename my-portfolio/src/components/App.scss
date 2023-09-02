@@ -5,6 +5,11 @@
   margin: auto;
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
 .Header {
   padding: 1rem 2rem;
   display: flex;
@@ -15,6 +20,7 @@
   position: sticky;
   height: 4.5rem;
   top: 0;
+  z-index: 9;
   &-name {
     font-size: 1.6rem;
     font-weight: 700;
@@ -24,11 +30,16 @@
     }
   }
 }
-
-.container {
-  max-width: 950px;
-  margin: auto;
+.NavBar {
+  display: flex;
+  & li{
+    padding: 0 .5rem;
+    & a {
+      color: #94A2B8;
+    }
+  }
 }
+
 
 footer {
   bottom: 0;
