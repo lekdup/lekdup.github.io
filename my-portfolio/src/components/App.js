@@ -29,7 +29,7 @@ function App() {
           </ul>
         </nav>
       </header>
-      <main className="container">
+      <main>
         <Home />
         <About />
         <Projects />
